@@ -47,7 +47,7 @@ create_directories:
 	if [ ! -d ./$(OBJFOLDER)  ]; then mkdir -p ./$(OBJFOLDER) ;fi
 
 $(OBJFOLDER)%.o: $(SRCFOLDER)%.c
-	$(CPP) $(CPPFLAGS) $(INC_ALL) -c $< -o $@
+	$(CPP) $(CFLAGS) $(INC_ALL) -c $< -o $@
 
 cleanobj:
 	rm -f $(OBJFOLDER)*.o
