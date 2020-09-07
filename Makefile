@@ -34,7 +34,7 @@ $(BIN_NAME): $(BIN_FILES)
 	$(CPP) $(CDEF) $^ -o $(BINFOLDER)$@ $(INC_ALL) $(LIBRARIES_IN_EXECUABLE)
 
 $(LIB_NAME): $(LIB_FILES)
-	$(LINKER) $(LINKER_ARGS) $< $(LIBFOLDER)$@
+	$(LINKER) $(LINKER_ARGS) $(LIBFOLDER)$@ $< 
 
 create_the_library: $(LIB_NAME)
 
