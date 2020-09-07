@@ -24,11 +24,11 @@ all: \
      execute_test_external
 
 BIN_NAME   = external_testing_example
-BIN_FILES  = $(OBJ_DIR)main.o
+BIN_FILES  = $(OBJFOLDER)main.o
 LIBRARIES_IN_EXECUABLE = $(LIB_BASE) -ltesting
 
 LIB_NAME   = libtesting.a
-LIB_FILES  = $(OBJ_DIR)testing.o
+LIB_FILES  = $(OBJFOLDER)testing.o
 
 $(BIN_NAME): $(BIN_FILES)
 	$(CPP) $(CDEF) $^ -o $(BINFOLDER)$@ $(INC_ALL) $(LIBRARIES_IN_EXECUABLE)
@@ -50,10 +50,10 @@ $(OBJFOLDER)%.o: $(SRCFOLDER)%.c
 	$(CPP) $(CPPFLAGS) $(INC_ALL) -c $< -o $@
 
 cleanobj:
-	rm -f $(OBJ_DIR)*.o
+	rm -f $(OBJFOLDER)*.o
 
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -rf $(OBJFOLDER)
 
 allc: all \
      cleanobj
