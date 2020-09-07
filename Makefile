@@ -6,7 +6,7 @@ CDEF         =
 LOADOPTS     =
 
 LINKER       = ar
-LINKER_ARGS  = rcs
+LINKER_ARGS  = -rcs
 
 BINFOLDER    = bin/
 OBJFOLDER    = obj/
