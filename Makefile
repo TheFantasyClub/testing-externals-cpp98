@@ -46,8 +46,8 @@ create_directories:
 	if [ ! -d ./$(BINFOLDER)  ]; then mkdir -p ./$(BINFOLDER) ;fi
 	if [ ! -d ./$(OBJFOLDER)  ]; then mkdir -p ./$(OBJFOLDER) ;fi
 
-$(OBJFOLDER)%.o: $(SRCFOLDER)%.c
-	$(CPP) $(CFLAGS) $(INC_ALL) -c $< -o $@
+$(OBJFOLDER)%.o: $(SRCFOLDER)%.cpp
+	$(CPP) $(CPPFLAGS) $(INC_ALL) -c $< -o $@
 
 cleanobj:
 	rm -f $(OBJFOLDER)*.o
