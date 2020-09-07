@@ -1,2 +1,2 @@
-# testing-externals-c99
-Testing externals with C99
+# testing-externals-cpp98
+Testing externals with C++98
