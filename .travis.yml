@@ -1,0 +1,17 @@
+dist: bionic
+sudo: false
+language: cpp
+os: linux
+
+addons:
+  apt:
+    packages:
+      - g++
+      - gcc
+      - make
+
+cache:
+  apt: true
+
+script:
+  - make
