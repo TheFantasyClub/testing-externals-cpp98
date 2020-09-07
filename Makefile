@@ -13,8 +13,8 @@ OBJFOLDER    = obj/
 SRCFOLDER    = src/
 LIBFOLDER    = lib/
 INCFOLDER    = include/
-INC_BASIC    = -I./$(INC_DIR)
-INC_SOURCE   = -I./$(SRC_DIR)
+INC_BASIC    = -I./$(INCFOLDER)
+INC_SOURCE   = -I./$(SRCFOLDER)
 INC_ALL      = $(INC_BASIC) $(INC_SOURCE)
 LIB_BASE     = -L./$(LIBFOLDER)
 
